@@ -208,24 +208,24 @@ FROM users u
 LEFT JOIN (
 SELECT
 p.OwnerUserId AS UserId,
-COUNT() AS post_count,
+COUNT(*) AS post_count,
 SUM(CASE WHEN p.ParentId IS NULL THEN 1 ELSE 0 END) AS question_count,
 SUM(CASE WHEN p.ParentId IS NOT NULL THEN 1 ELSE 0 END) AS answer_count
 FROM posts p
 GROUP BY p.OwnerUserId
 ) ps ON ps.UserId = u.Id
 LEFT JOIN (
-SELECT c.UserId AS UserId, COUNT() AS comment_count
+SELECT c.UserId AS UserId, COUNT(*) AS comment_count
 FROM comments c
 GROUP BY c.UserId
 ) cs ON cs.UserId = u.Id
 LEFT JOIN (
-SELECT v.UserId AS UserId, COUNT() AS votes_cast
+SELECT v.UserId AS UserId, COUNT(*) AS votes_cast
 FROM votes v
 GROUP BY v.UserId
 ) vs ON vs.UserId = u.Id
 LEFT JOIN (
-SELECT b.UserId AS UserId, COUNT() AS badge_count
+SELECT b.UserId AS UserId, COUNT(*) AS badge_count
 FROM badges b
 GROUP BY b.UserId
 ) bs ON bs.UserId = u.Id
