@@ -1,4 +1,4 @@
-# CoeusBI - A Comprehensive LLM-Powered Interactive Business Intelligence Systems in Baidu
+# CoeusBI: A Comprehensive Interactive Business Intelligence System Powered by LLMs at Baidu
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -44,4 +44,4 @@ We release our dataset using the same open‑sourcing way as SiriusBI.
 
 ## 🔧 System Architecture  
 
-![Overview](OverviewOfCoeusBI.png)
+![Overview](overviewpng)
