@@ -44,4 +44,4 @@ We release our dataset using the same open‑sourcing way as SiriusBI.
 
 ## 🔧 System Architecture  
 
-![Overview](overviewpng)
+![Overview](overview.png)
